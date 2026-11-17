@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3259904530243357206}
   - component: {fileID: 4302400685492869618}
   - component: {fileID: 2143855412770586551}
-  - component: {fileID: 6832006960094101257}
+  - component: {fileID: 99852738280147215}
   - component: {fileID: 7541018695383486120}
+  - component: {fileID: 6832006960094101257}
   - component: {fileID: 7648363712721994368}
   - component: {fileID: 2353956605576475935}
   - component: {fileID: 5195636260233916799}
@@ -21,7 +22,7 @@ GameObject:
   - component: {fileID: 709712200430624788}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +101,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6832006960094101257
+--- !u!114 &99852738280147215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,10 +110,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 299277217111610873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d4436760c2ba4468f74412237cac92, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c3575cf029cec04db33091a26d473e7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NetworkPlayer
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerColorSetter
   ShowTopMostFoldoutHeaderGroup: 1
+  characterRenderer: {fileID: 0}
+  myColor: {r: 0, g: 1, b: 0, a: 1}
+  otherPlayerColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &7541018695383486120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2429791854
+  GlobalObjectIdHash: 361833535
   InScenePlacedSourceGlobalObjectIdHash: 766090302
   m_InScenePlacedDisabledByDefault: 0
   DeferredDespawnTick: 0
@@ -140,6 +144,19 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &6832006960094101257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299277217111610873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d4436760c2ba4468f74412237cac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkPlayer
+  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!114 &7648363712721994368
 MonoBehaviour:
   m_ObjectHideFlags: 0
